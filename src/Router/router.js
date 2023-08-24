@@ -39,22 +39,62 @@ export default class Router {
         document.querySelector(".bg").classList.remove("exploration");
         document.querySelector(".bg").classList.remove("universe");
         document.querySelector(".bg").classList.add("home");
+
+        document
+          .querySelector("header li:nth-child(1) a")
+          .classList.add("active");
+        document
+          .querySelector("header li:nth-child(2) a")
+          .classList.remove("active");
+        document
+          .querySelector("header li:nth-child(3) a")
+          .classList.remove("active");
         break;
       case "/universe":
         document.querySelector(".bg").classList.remove("home");
         document.querySelector(".bg").classList.remove("exploration");
         document.querySelector(".bg").classList.add("universe");
+
+        document
+          .querySelector("header li:nth-child(1) a")
+          .classList.remove("active");
+        document
+          .querySelector("header li:nth-child(2) a")
+          .classList.add("active");
+        document
+          .querySelector("header li:nth-child(3) a")
+          .classList.remove("active");
         break;
       case "/exploration":
         document.querySelector(".bg").classList.remove("home");
         document.querySelector(".bg").classList.remove("universe");
         document.querySelector(".bg").classList.add("exploration");
+
+        document
+          .querySelector("header li:nth-child(1) a")
+          .classList.remove("active");
+        document
+          .querySelector("header li:nth-child(2) a")
+          .classList.remove("active");
+        document
+          .querySelector("header li:nth-child(3) a")
+          .classList.add("active");
         break;
 
       default:
         document.querySelector(".bg").classList.remove("home");
         document.querySelector(".bg").classList.remove("universe");
         document.querySelector(".bg").classList.remove("exploration");
+
+        document
+          .querySelector("header li:nth-child(1) a")
+          .classList.remove("active");
+        document
+          .querySelector("header li:nth-child(2) a")
+          .classList.remove("active");
+        document
+          .querySelector("header li:nth-child(3) a")
+          .classList.remove("active");
         break;
     }
   }
